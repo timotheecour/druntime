@@ -140,7 +140,8 @@ extern (C) void sections_osx_onAddImage(in mach_header* h, intptr_t slide)
         }
         else if (_sections.modules.ptr !is null)
         {
-            fprintf(stderr, "Shared libraries are not yet supported on OSX.\n");
+            // TODO: instead see src/rt/config.d:73:36
+            //fprintf(stderr, "Shared libraries are not yet supported on OSX.\n");
         }
 
         debug(PRINTF) printf("  minfodata\n");
